@@ -1,0 +1,4 @@
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-orange-400 text-xs p-1 hover:text-orange-500;
+}
