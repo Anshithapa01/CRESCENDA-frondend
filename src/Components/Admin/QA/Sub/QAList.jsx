@@ -11,7 +11,7 @@ const QAList = () => {
   const [loading, setLoading] = useState(true);
   const [showAlert, setShowAlert] = useState(false);
   const [alert, setAlert] = useState({ message: '', status: '' });
-  const auth=useSelector(store=>store.qaAuth)
+  const auth=useSelector(store=>store.adminAuth)
   const navigate=useNavigate();
   const location = useLocation();
 
@@ -30,7 +30,7 @@ const QAList = () => {
     const fetchQAs = async () => {
       try {
         const response = await axios.get(`${QA_BASE_URL}`,{
-            headers: { Authorization: `Bearer ${auth.qaJwt}` },
+            headers: { Authorization: `Bearer ${auth.adminJwt}` },
           });
         console.log(response.data);
         
@@ -52,15 +52,16 @@ const QAList = () => {
         url,
         {},
         {
-          headers: { Authorization: `Bearer ${auth.qaJwt}` },
+          headers: { Authorization: `Bearer ${auth.adminJwt}` },
         }
       );
 
-      setData((prevData) =>
-        prevData.map((item) =>
-          item.id === id ? { ...item, isBlocked: !isBlocked } : item
-        )
-      );
+      setData((prevData) => {
+        return prevData.map((item) =>
+          item.qaId === id ? { ...item, isBlocked: !isBlocked } : item
+        );
+      });
+  
 
       setAlert({
         message: `QA ${isBlocked ? "unblocked" : "blocked"} successfully.`,
