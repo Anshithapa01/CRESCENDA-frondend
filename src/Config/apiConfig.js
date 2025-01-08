@@ -17,6 +17,7 @@ export const ADMIN_AUTH_BASE_URL="http://localhost:5454/admin"
 export const QA_AUTH_BASE_URL="http://localhost:5454/qa"
 
 
+
 // Configuration for API and Auth Base URLs
 // export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 // export const MENTOR_BASE_URL = import.meta.env.VITE_MENTOR_BASE_URL;
