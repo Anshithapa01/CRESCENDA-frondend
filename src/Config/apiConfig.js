@@ -8,13 +8,13 @@ export const QA_BASE_URL="https://backend.anshitha.cloud/api/qa"
 
 
 
-export const API_AUTH_BASE_URL = "https://anshitha.cloud"
+export const API_AUTH_BASE_URL = "https://backend.anshitha.cloud"
 
-export const MENTOR_AUTH_BASE_URL="https://anshitha.cloud/mentor"
+export const MENTOR_AUTH_BASE_URL="https://backend.anshitha.cloud/mentor"
 
-export const ADMIN_AUTH_BASE_URL="https://anshitha.cloud/admin"
+export const ADMIN_AUTH_BASE_URL="https://backend.anshitha.cloud/admin"
 
-export const QA_AUTH_BASE_URL="https://anshitha.cloud/qa"
+export const QA_AUTH_BASE_URL="https://backend.anshitha.cloud/qa"
 
 
 
