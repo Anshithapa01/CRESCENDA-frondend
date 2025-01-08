@@ -34,10 +34,10 @@ const loginFailure =(error)=>({type:LOGIN_FAILURE,payload:error});
 export const login = (userData) => async(dispatch)=>{
     dispatch(loginRequest())
     try {
-        const response=await axios.post(`${API_AUTH_BASE_URL}/auth/signin`,headers: {
+        const response=await axios.post(`${API_AUTH_BASE_URL}/auth/signin`,{headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-        },
+        },withCredentials: true,},
          userData)
         console.log(response.data);  
         const user=response.data;   
