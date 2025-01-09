@@ -50,7 +50,6 @@ export const login = (userData) => async(dispatch)=>{
 }
 
 export const testLog= ()=>{
-    const axios = require('axios');
 let data = JSON.stringify({
   "email": "anshithapa41@gmail.com",
   "password": "11223344"
