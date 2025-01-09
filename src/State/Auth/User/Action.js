@@ -54,6 +54,7 @@ let data = JSON.stringify({
   "email": "anshithapa41@gmail.com",
   "password": "11223344"
 });
+console.log('started...');
 
 let config = {
   method: 'post',
