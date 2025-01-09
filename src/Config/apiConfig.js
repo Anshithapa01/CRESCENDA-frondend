@@ -8,7 +8,7 @@ export const QA_BASE_URL="https://backend.anshitha.cloud/api/qa"
 
 
 
-export const API_AUTH_BASE_URL = "https://www.backend.anshitha.cloud"
+export const API_AUTH_BASE_URL = "https://backend.anshitha.cloud"
 
 export const MENTOR_AUTH_BASE_URL="https://backend.anshitha.cloud/mentor"
 
