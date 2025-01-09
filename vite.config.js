@@ -6,4 +6,10 @@ export default defineConfig({
   define: {
         global: {}, // Define `global` for libraries expecting a Node.js environment
       },
+  build: {
+    outDir: 'dist'
+  },
+  server: {
+    historyApiFallback: true
+  }
 });

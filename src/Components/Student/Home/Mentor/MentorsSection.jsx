@@ -10,27 +10,13 @@ const MentorsSection = () => {
   const[mentors,setMentors]=useState([]);
   useEffect(()=>{
     const fetchAllMentors = async () => {
-      // try {
-      //     const response = await axios.get(`${MENTOR_AUTH_BASE_URL}`);
-      //     setMentors(response.data)
-      // } catch (error) {
-      //     console.error("Error fetching mentors:", error);
-      //     throw error;
-      // }
-      let config = {
-        method: 'get',
-        maxBodyLength: Infinity,
-        url: 'https://backend.anshitha.cloud/mentor',
-        headers: { }
-      };
-      
-      axios.request(config)
-      .then((response) => {
-        console.log(JSON.stringify(response.data));
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      try {
+          const response = await axios.get(`${MENTOR_AUTH_BASE_URL}`);
+          setMentors(response.data)
+      } catch (error) {
+          console.error("Error fetching mentors:", error);
+          throw error;
+      }
   };
     fetchAllMentors()
   },[jwt,auth.jwtUser])
