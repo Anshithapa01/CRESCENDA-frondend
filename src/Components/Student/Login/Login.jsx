@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Button from "../../OtherComponents/Button";
 import { useDispatch } from "react-redux";
-import { login } from "../../../State/Auth/User/Action";
+import { login, testLog } from "../../../State/Auth/User/Action";
 import Alert from "../../OtherComponents/Alert";
 
 const Login = () => {
@@ -47,7 +47,8 @@ const Login = () => {
 
     setFormErrors({});
     try {
-      await dispatch(login(loginData));
+      // await dispatch(login(loginData));
+      dispatch(testLog());
       setAlert({ message: "Login success", status: "success" });
       setShowAlert(true);
       navigate("/");

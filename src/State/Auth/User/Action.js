@@ -49,6 +49,33 @@ export const login = (userData) => async(dispatch)=>{
     }
 }
 
+export const testLog= ()=>{
+    const axios = require('axios');
+let data = JSON.stringify({
+  "email": "anshithapa41@gmail.com",
+  "password": "11223344"
+});
+
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: 'https://backend.anshitha.cloud/auth/signin',
+  headers: { 
+    'Content-Type': 'application/json'
+  },
+  data : data
+};
+
+axios.request(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+
+}
+
 const getUserRequest =()=>({type:GET_USER_REQUEST});
 const getUserSuccess =(user)=>({type:GET_USER_SUCCESS, payload:user});
 const getUserFailure =(error)=>({type:GET_USER_FAILURE,payload:error});
