@@ -32,7 +32,7 @@ const Login = () => {
     return errors;
   };
 
-  handleGoogle=()=>{
+  const handleGoogle=()=>{
     googleLogin()
   }
 
