@@ -5,6 +5,7 @@ import Button from "../../OtherComponents/Button";
 import { useDispatch } from "react-redux";
 import { login } from "../../../State/Auth/User/Action";
 import Alert from "../../OtherComponents/Alert";
+import { googleLogin } from "../../../Utility/google";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -30,6 +31,10 @@ const Login = () => {
     if (!loginData.password) errors.password = "Password is required.";
     return errors;
   };
+
+  handleGoogle=()=>{
+    googleLogin()
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -136,7 +141,9 @@ const Login = () => {
           <hr className="flex-1 border-gray-300" />
         </div>
 
-        <button className="w-full flex justify-center items-center py-2 border border-gray-300 rounded hover:bg-gray-100">
+        <button 
+        onClick={handleGoogle}
+        className="w-full flex justify-center items-center py-2 border border-gray-300 rounded hover:bg-gray-100">
           <img
             src="google.jpeg"
             alt="Google Icon"
