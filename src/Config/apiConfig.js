@@ -1,21 +1,42 @@
-export const API_BASE_URL = "https://backend.anshitha.cloud/api"
+// export const API_BASE_URL = "https://backend.anshitha.cloud/api"
 
-export const MENTOR_BASE_URL="https://backend.anshitha.cloud/api/mentor"
+// export const MENTOR_BASE_URL="https://backend.anshitha.cloud/api/mentor"
 
-export const ADMIN_BASE_URL="https://backend.anshitha.cloud/api/admin"
+// export const ADMIN_BASE_URL="https://backend.anshitha.cloud/api/admin"
 
-export const QA_BASE_URL="https://backend.anshitha.cloud/api/qa"
+// export const QA_BASE_URL="https://backend.anshitha.cloud/api/qa"
 
 
 
-export const API_AUTH_BASE_URL = "https://backend.anshitha.cloud"
+// export const API_AUTH_BASE_URL = "https://backend.anshitha.cloud"
 
-export const MENTOR_AUTH_BASE_URL="https://backend.anshitha.cloud/mentor"
+// export const MENTOR_AUTH_BASE_URL="https://backend.anshitha.cloud/mentor"
 
-export const ADMIN_AUTH_BASE_URL="https://backend.anshitha.cloud/admin"
+// export const ADMIN_AUTH_BASE_URL="https://backend.anshitha.cloud/admin"
 
-export const QA_AUTH_BASE_URL="https://backend.anshitha.cloud/qa"
+// export const QA_AUTH_BASE_URL="https://backend.anshitha.cloud/qa"
 
+
+
+
+
+export const API_BASE_URL = "https://43.204.114.98/api"
+
+export const MENTOR_BASE_URL="https://43.204.114.98/api/mentor"
+
+export const ADMIN_BASE_URL="https://43.204.114.98/api/admin"
+
+export const QA_BASE_URL="https://43.204.114.98/api/qa"
+
+
+
+export const API_AUTH_BASE_URL = "https://43.204.114.98"
+
+export const MENTOR_AUTH_BASE_URL="https://43.204.114.98/mentor"
+
+export const ADMIN_AUTH_BASE_URL="https://43.204.114.98/admin"
+
+export const QA_AUTH_BASE_URL="https://43.204.114.98/qa"
 
 
 // Configuration for API and Auth Base URLs
