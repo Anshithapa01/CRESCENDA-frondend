@@ -20,6 +20,30 @@ export const QA_AUTH_BASE_URL="https://backend.anshitha.cloud/qa"
 
 
 
+
+// export const API_BASE_URL = "https://anshitha.cloud/api"
+
+// export const MENTOR_BASE_URL="https://anshitha.cloud/api/mentor"
+
+// export const ADMIN_BASE_URL="https://anshitha.cloud/api/admin"
+
+// export const QA_BASE_URL="https://anshitha.cloud/api/qa"
+
+
+
+// export const API_AUTH_BASE_URL = "https://anshitha.cloud"
+
+// export const MENTOR_AUTH_BASE_URL="https://anshitha.cloud/mentor"
+
+// export const ADMIN_AUTH_BASE_URL="https://anshitha.cloud/admin"
+
+// export const QA_AUTH_BASE_URL="https://anshitha.cloud/qa"
+
+
+
+
+
+
 // export const API_BASE_URL = "https://43.204.114.98/api"
 
 // export const MENTOR_BASE_URL="https://43.204.114.98/api/mentor"
@@ -39,6 +63,9 @@ export const QA_AUTH_BASE_URL="https://backend.anshitha.cloud/qa"
 // export const QA_AUTH_BASE_URL="https://43.204.114.98/qa"
 
 
+
+
+
 // Configuration for API and Auth Base URLs
 // export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 // export const MENTOR_BASE_URL = import.meta.env.VITE_MENTOR_BASE_URL;
@@ -49,6 +76,9 @@ export const QA_AUTH_BASE_URL="https://backend.anshitha.cloud/qa"
 // export const MENTOR_AUTH_BASE_URL = import.meta.env.VITE_MENTOR_AUTH_BASE_URL;
 // export const ADMIN_AUTH_BASE_URL = import.meta.env.VITE_ADMIN_AUTH_BASE_URL;
 // export const QA_AUTH_BASE_URL = import.meta.env.VITE_QA_AUTH_BASE_URL;
+
+
+
 
 
 
