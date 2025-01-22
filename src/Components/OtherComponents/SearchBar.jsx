@@ -3,29 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import Button from './Button';
-import { ADMIN_BASE_URL } from '../../Config/apiConfig';
 
 const SearchBar = () => {
   const [query, setQuery] = useState('');
-  const [categories, setCategories] = useState([]);
-  const auth = useSelector((store) => store.adminAuth);
   const navigate = useNavigate();
-
-  // Fetch categories and subcategories from the API
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await axios.get(`${ADMIN_BASE_URL}/category`, {
-          headers: { Authorization: `Bearer ${auth.adminJwt}` },
-        });
-        setCategories(response.data);
-      } catch (error) {
-        console.error('Error fetching categories:', error);
-      }
-    };
-
-    fetchCategories();
-  }, []);
 
   const handleSearch = () => {
     navigate(`/search?query=${query}`);
