@@ -97,7 +97,7 @@ const SignUpPage = () => {
 
   return (
     <Layout
-      imageSrc="../../../public/signup.jpg"
+      imageSrc="/signup.jpg"
       imageAlt="Teacher Image"
       infoText="Do you know you can also become an Instructor and earn side cash? It's easy! Create an account to unlock a milestone."
     >
@@ -113,7 +113,7 @@ const SignUpPage = () => {
           />
         )}
       </div>
-      <img src="../../../public/logo-2.png" className="h-14 w-72 self-center" />
+      <img src="/logo-2.png" className="h-14 w-72 self-center" />
       <p className="self-center p-5 text-orange-400">
         Please create your new account here...
       </p>

@@ -72,7 +72,7 @@ const LoginPage = () => {
 
   return (
     <Layout
-      imageSrc="../../../public/login.jpeg"
+      imageSrc="/login.jpeg"
       imageAlt="Einstein Image"
       infoText="Do you know the completion rate of our courses is 84.7%? Hover aboard to know more."
     >
@@ -88,7 +88,7 @@ const LoginPage = () => {
           />
         )}
       </div>
-      <img src="../../../public/logo-2.png" className="h-14 w-72 self-center" />
+      <img src="/logo-2.png" className="h-14 w-72 self-center" />
       <p className="self-center p-5 text-orange-400">
         Sign in to your account to continue...
       </p>

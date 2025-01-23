@@ -34,7 +34,7 @@ const NavBar = () => {
 
   return (
     <nav className="bg-white shadow-md ml-5 py-4 px-6 flex justify-between items-center">
-      <img src="../../../public/logo-2.png" className="h-14 " />
+      <img src="/logo-2.png" className="h-14 " />
       <div className="flex space-x-8">
         <Link
           to={"/mentor/dashboard"}
