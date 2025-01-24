@@ -25,7 +25,7 @@ const NavBar = () => {
   return (
     <nav className="bg-gray-900 text-white py-6 px-10 flex justify-between items-center">
       <div className="flex items-center space-x-4">
-        <img src="/public/adminLogo.png" alt="Crescenda Logo" className="h-10 w-60" /> 
+        <img src="/adminLogo.png" alt="Crescenda Logo" className="h-10 w-60" /> 
       </div>
       <div className="flex space-x-8">
         <Link to="/qa/dashboard" className="hover:text-yellow-600">Dashboard</Link>

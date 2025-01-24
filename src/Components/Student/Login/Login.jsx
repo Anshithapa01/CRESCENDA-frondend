@@ -6,6 +6,9 @@ import { useDispatch } from "react-redux";
 import { login } from "../../../State/Auth/User/Action";
 import Alert from "../../OtherComponents/Alert";
 import { googleLogin } from "../../../Utility/google";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import GoogleLoginButton from "./GoogleLoginButton";
+import { GOOGLE_CLIENT_ID } from "../../../Config/apiConfig";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -31,10 +34,6 @@ const Login = () => {
     if (!loginData.password) errors.password = "Password is required.";
     return errors;
   };
-
-  const handleGoogle=()=>{
-    googleLogin()
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -141,16 +140,11 @@ const Login = () => {
           <hr className="flex-1 border-gray-300" />
         </div>
 
-        <button 
-        onClick={handleGoogle}
-        className="w-full flex justify-center items-center py-2 border border-gray-300 rounded hover:bg-gray-100">
-          <img
-            src="google.jpeg"
-            alt="Google Icon"
-            className="h-5 w-auto mr-2"
-          />
-          Google
-        </button>
+        <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+          <div>
+            <GoogleLoginButton />
+          </div>
+        </GoogleOAuthProvider>
 
         <p className="mt-6 text-center text-sm text-gray-600">
           Need an Account?{" "}

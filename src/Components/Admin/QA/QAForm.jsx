@@ -8,7 +8,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const QAForm = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const auth = useSelector((store) => store.qaAuth);
+  const auth = useSelector((store) => store.adminAuth);
   const [isUpdating,setIsUpdating]=useState(false);
 
   // Initial form state
@@ -45,7 +45,7 @@ const QAForm = () => {
       try {
         const response = await axios.get(`${QA_BASE_URL}/leads`, {
           headers: {
-            Authorization: `Bearer ${auth.qaJwt}`,
+            Authorization: `Bearer ${auth.adminJwt}`,
           },
         });
         setQaLeads(response.data);
@@ -55,7 +55,7 @@ const QAForm = () => {
     };
 
     fetchQALeads();
-  }, [auth.qaJwt]);
+  }, [auth.adminJwt]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -96,14 +96,14 @@ const QAForm = () => {
       const leadData =
       qaData.role === "QA_Expert" && qaData.lead
         ? { qaId: qaData.lead } // Include the lead as an object with qaId
-        : {qaId: ''};
+        : {qaId: null};
 
     const submissionData = {
       ...qaData,
       lead: leadData, // Replace string with object
     };
     
-    if (qaData.role === "QA_Lead") setQaData({...qaData, lead:{...qaData.lead, qaId: ''}})
+    // if (qaData.role === "QA_Lead") setQaData({...qaData, lead:{...qaData.lead, qaId: ''}})
     console.log('submissionData',submissionData);
     
       const url = qaData.qaId
@@ -113,7 +113,7 @@ const QAForm = () => {
 
       const response = await axios[method](url, submissionData, {
         headers: {
-          Authorization: `Bearer ${auth.qaJwt}`,
+          Authorization: `Bearer ${auth.adminJwt}`,
         },
       });
 

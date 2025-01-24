@@ -38,11 +38,11 @@ const Sidebar = () => {
           />
         </div>
         <nav className="mt-10 ml-5">
-          <Link to="" className="block py-2 px-4 hover:bg-blue-700"><SpeedIcon /> Dashboard</Link>
-          <Link to="courses" className="block py-2 px-4 hover:bg-blue-700"><AutoStoriesIcon /> Courses</Link>
-          <Link to="user" className="block py-2 px-4 hover:bg-blue-700"><Diversity3Icon /> Users</Link>
-          <Link to="category" className="block py-2 px-4 hover:bg-blue-700"><Dashboard /> Category</Link>
-          <Link to="qa" className="block py-2 px-4 hover:bg-blue-700"><QuestionAnswerIcon /> QA</Link>
+          <Link to="/admin" className="block py-2 px-4 hover:bg-blue-700"><SpeedIcon /> Dashboard</Link>
+          <Link to="/admin/courses" className="block py-2 px-4 hover:bg-blue-700"><AutoStoriesIcon /> Courses</Link>
+          <Link to="/admin/user" className="block py-2 px-4 hover:bg-blue-700"><Diversity3Icon /> Users</Link>
+          <Link to="/admin/category" className="block py-2 px-4 hover:bg-blue-700"><Dashboard /> Category</Link>
+          <Link to="/admin/qa" className="block py-2 px-4 hover:bg-blue-700"><QuestionAnswerIcon /> QA</Link>
           <button onClick={handleLogout} className="block py-2 px-4 hover:bg-blue-700"><ExitToAppIcon /> Logout</button>
         </nav>
       </div>

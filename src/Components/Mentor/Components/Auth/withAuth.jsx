@@ -19,7 +19,9 @@ const withAuth = (WrappedComponent) => {
       }, 5000);
 
       return () => clearTimeout(timeout);
-    }, [shouldRun, jwt,auth.user, dispatch]);
+    }, [shouldRun]);
+      // , jwt,auth.user, dispatch
+    
     console.log(auth);
     
     if (!auth.jwt) {
